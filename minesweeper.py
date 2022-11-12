@@ -26,3 +26,8 @@ def funnyGround(r,c,grid):
           count=count+1
     return count      
   return-1
+
+def showSpace(r,c,grid):
+  grid[r][c][1]["text"]=grid[r][c][0]
+  grid[r][c][1]["relief"]="sunken"
+  

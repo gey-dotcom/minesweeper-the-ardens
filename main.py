@@ -16,7 +16,13 @@ for y in range(ROWCOUNT):
 
 for r in range(ROWCOUNT):
   for c in range(COLLUMCOUNT):
-    button=tk.Button(text=" ")
+    button=tk.Button(
+      text=" ",
+      width=6,
+      height=3,
+      command=lambda row=r,collum=c,g=grid:showSpace(row,collum,g)
+      )
     button.grid(row=r,column=c)
     grid[r][c] = [grid[r][c],button]
 
+tk.mainloop()
