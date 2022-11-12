@@ -30,4 +30,18 @@ def funnyGround(r,c,grid):
 def showSpace(r,c,grid):
   grid[r][c][1]["text"]=grid[r][c][0]
   grid[r][c][1]["relief"]="sunken"
-  
+
+def showSpaces(r,c,grid):
+  if grid[r][c][0]==-1:
+    visited=set()
+    queue=[(r,c)]
+    while len(queue)>0:
+      cu=queue.pop(0)
+      if grid[cu[0]][cu[1]][0]==0:
+        for roff in range(-1,2):
+          for coff in range(-1,2):
+            if 0<=r+roff<len(grid) and 0<=c+coff<len(grid[0]) and not((r+roff,c+coff) in visited):
+              queue.append((r+roff,c+coff))
+      showSpace(cu[0],cu[1],grid)
+      visited.add ((cu[0],cu[1]))
+
