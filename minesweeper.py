@@ -32,7 +32,7 @@ def showSpace(r,c,grid):
   grid[r][c][1]["relief"]="sunken"
 
 def showSpaces(r,c,grid):
-  if grid[r][c][0]==-1:
+  if grid[r][c][0]!=-1:
     visited=set()
     queue=[(r,c)]
     while len(queue)>0:

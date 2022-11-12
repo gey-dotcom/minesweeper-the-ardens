@@ -20,7 +20,7 @@ for r in range(ROWCOUNT):
       text=" ",
       width=6,
       height=3,
-      command=lambda row=r,collum=c,g=grid:showSpace(row,collum,g)
+      command=lambda row=r,collum=c,g=grid:showSpaces(row,collum,g)
       )
     button.grid(row=r,column=c)
     grid[r][c] = [grid[r][c],button]
